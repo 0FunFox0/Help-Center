@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>의공학 교육 메타버스 도움센터</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>의공학 교육 메타버스 도움센터</h1>
+      <p>메타버스 사용 중 발생하는 문제를 해결하거나 도움을 받을 수 있는 공간입니다.</p>
+    </header>
+
+    <main>
+      <!-- FAQ 섹션 -->
+      <section id="faq">
+        <h2>자주 묻는 질문 (FAQ)</h2>
+        <div class="faq-item">
+          <h3>Q: 메타버스에서 3D 모델을 업로드하려면 어떻게 하나요?</h3>
+          <p>A: 관리자 메뉴에서 "3D 모델 추가" 옵션을 선택한 뒤 지원되는 파일 형식(STL, OBJ)을 업로드하세요.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Q: 실시간 수업 도구가 작동하지 않아요.</h3>
+          <p>A: 브라우저가 최신 버전인지 확인하고, 네트워크 연결 상태를 점검하세요.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Q: 의공학 자료를 다운로드하려면 어떻게 해야 하나요?</h3>
+          <p>A: 메타버스의 '학습 자료' 섹션에서 원하는 파일을 선택한 후 다운로드 버튼을 클릭하세요.</p>
+        </div>
+      </section>
+
+      <!-- 문의하기 섹션 -->
+      <section id="contact">
+        <h2>문의하기</h2>
+        <form id="contact-form">
+          <label for="name">이름</label>
+          <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required>
+
+          <label for="email">이메일</label>
+          <input type="email" id="email" name="email" placeholder="이메일 주소를 입력하세요" required>
+
+          <label for="message">문의 내용</label>
+          <textarea id="message" name="message" rows="5" placeholder="문의 내용을 입력하세요" required></textarea>
+
+          <button type="submit">제출</button>
+        </form>
+        <p id="response-message"></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2024 의공학 교육 메타버스 도움센터</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
