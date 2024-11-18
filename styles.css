@@ -1,41 +1,57 @@
-/* 전체 레이아웃 */
-body {
-  font-family: 'Arial', sans-serif;
+/* Reset 기본 스타일 초기화 */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f9;
-  color: #333;
+  box-sizing: border-box;
+}
+
+/* 전체 레이아웃 */
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background: linear-gradient(120deg, #0d3b66, #1c587a);
+  color: #f1f1f1;
 }
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 900px;
+  margin: 50px auto;
   padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
 }
 
+/* 헤더 */
 header {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 header h1 {
-  color: #1a73e8;
+  font-size: 2.5em;
+  color: #00d9ff;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 header p {
-  font-size: 1.1em;
-  color: #666;
+  font-size: 1.2em;
+  color: #d8e3e7;
 }
 
 /* FAQ 섹션 */
 #faq {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 #faq h2 {
-  border-left: 5px solid #1a73e8;
+  font-size: 1.8em;
+  color: #00d9ff;
+  border-left: 5px solid #00d9ff;
   padding-left: 10px;
-  color: #333;
+  margin-bottom: 20px;
 }
 
 .faq-item {
@@ -43,62 +59,110 @@ header p {
 }
 
 .faq-item h3 {
-  font-size: 1.1em;
-  color: #444;
+  font-size: 1.2em;
+  color: #f1f1f1;
   cursor: pointer;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.faq-item h3:hover {
+  background: rgba(0, 217, 255, 0.3);
+  transform: translateX(10px);
 }
 
 .faq-item p {
-  margin-top: 5px;
-  padding: 5px 10px;
-  background-color: #e8f0fe;
-  border-left: 3px solid #1a73e8;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: rgba(0, 0, 0, 0.2);
+  border-left: 4px solid #00d9ff;
+  border-radius: 8px;
   display: none;
 }
 
 /* 문의하기 섹션 */
 #contact h2 {
-  border-left: 5px solid #1a73e8;
+  font-size: 1.8em;
+  color: #00d9ff;
+  border-left: 5px solid #00d9ff;
   padding-left: 10px;
-  color: #333;
+  margin-bottom: 20px;
 }
 
 form {
   display: flex;
   flex-direction: column;
+  gap: 15px;
 }
 
 label {
-  margin: 10px 0 5px;
   font-weight: bold;
+  font-size: 1em;
 }
 
 input, textarea {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 10px;
   font-size: 1em;
+  background: rgba(255, 255, 255, 0.2);
+  color: #f1f1f1;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  background: rgba(0, 217, 255, 0.3);
+  box-shadow: 0px 4px 12px rgba(0, 217, 255, 0.5);
 }
 
 button {
-  margin-top: 20px;
-  padding: 10px;
-  background-color: #1a73e8;
-  color: #fff;
+  padding: 12px 15px;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  border-radius: 10px;
   font-size: 1em;
+  background: #00d9ff;
+  color: #0d3b66;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-  background-color: #155bb5;
+  background: #00bcd4;
+  transform: scale(1.05);
+}
+
+/* 확인 메시지 */
+#response-message {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #00ffcc;
+  text-align: center;
 }
 
 /* footer */
 footer {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 40px;
   font-size: 0.9em;
-  color: #666;
+  color: #d8e3e7;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  #faq h2, #contact h2 {
+    font-size: 1.5em;
+  }
 }
